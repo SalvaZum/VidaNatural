@@ -1,0 +1,349 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    h1 {
+      font-size: 2rem;   /* tamaño uniforme */
+      margin: 20px 0;   /* espacio arriba y abajo */
+      text-align: center;
+    }
+
+    section{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .decorative-line{
+      margin: 5px;
+      width: 40%;
+      height: 3px;
+      border-radius: 10px;
+      background-color: #00c85a;
+    }
+
+    body {
+      background: linear-gradient(135deg, #eaffd0, #c1ffd7);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      z-index: 1000;
+      border-bottom: 2px solid #aaffaa;
+    }
+
+    nav h2 {
+      color: #009f4d;
+      font-size: 1.7rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #009f4d;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+      z-index: 1100;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: #333;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 50, 0, 0.95);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 2rem;
+      transform: translateY(-100%);
+      transition: transform 0.5s ease;
+      z-index: 1050;
+    }
+
+    .overlay.active {
+      transform: translateY(0);
+    }
+
+    .overlay a {
+      color: #fff;
+      font-size: 2rem;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .overlay a:hover {
+      color: #aaffaa;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: url('https://images.unsplash.com/photo-1506806732259-39c2d0268443') center/cover no-repeat;
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    header h1 {
+      position: relative;
+      font-size: 4rem;
+      color: #009f4d;
+      z-index: 1;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    header p {
+      position: relative;
+      margin-top: 1rem;
+      font-size: 1.3rem;
+      z-index: 1;
+      color: #333;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    .btn {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      background: #009f4d;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      color: white;
+      transition: transform 0.3s, background 0.3s;
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      background: #00c85a;
+    }
+
+    section {
+      padding: 6rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      max-width: 900px;
+      margin: 3rem auto;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.5);
+      backdrop-filter: blur(10px);
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .producto {
+      min-width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .producto img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .producto h3 {
+      margin-top: 1rem;
+      font-size: 1.3rem;
+      color: #009f4d;
+    }
+
+    .producto p {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .carousel-buttons button {
+      background: rgba(0,159,77,0.8);
+      border: none;
+      color: #fff;
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      transition: background 0.3s;
+    }
+
+    .carousel-buttons button:hover {
+      background: rgba(0,200,90,0.9);
+    }
+
+    #nosotros{
+        background-color: #94e9bd;
+    }
+
+    #chat {
+      width: 400px;
+      height: 500px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      overflow-y: auto;
+    }
+    #chat p {
+      margin: 5px 0;
+    }
+    .user { color: blue; }
+    .bot { color: green; }
+
+    footer {
+      background: #009f4d;
+      padding: 2rem;
+      text-align: center;
+      color: #fff;
+      margin-top: 4rem;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    #soporte-tecnico{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    #soporte-tecnico h1{
+      margin: 10px;
+    }
+    .chat{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .chat input{
+      width: 90%;
+      margin: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      border: #009f4d 2px outset;
+    }
+    .chat button{
+      padding: 10px;
+      border-radius: 10px;
+      border:#009f4d 2px outset;
+      background-color: transparent;
+      font-weight: 600;
+    }
+    .chat button:hover{
+      background-color: #009f4d;
+      color: white;
+    }
+    .user{
+      border: blue 2px solid;
+      background-color: rgba(103, 143, 255, 0.384);
+      border-radius: 10px;
+      padding: 10px;
+      margin: 10px;
+    }
+    .bot{
+      border: #009f4d 2px solid;
+      background-color: transparent;
+      border-radius: 10px;
+      padding: 10px;
+      margin: 10px;
+    }

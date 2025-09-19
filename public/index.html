@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vida Natural - Dietética</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+  <nav>
+    <h2>Vida Natural</h2>
+    <ul>
+      <li><a href="#catalogo">Catálogo</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+
+  <div class="overlay" id="overlay">
+    <button class="close-btn" id="closeBtn">✕</button>
+    <a href="#catalogo">Catálogo</a>
+    <a href="#soporte-tecnico">Soporte IA</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+
+  <header>
+    <h1>Vida Natural</h1>
+    <p>Alimentos saludables y orgánicos para tu bienestar</p>
+    <a href="#catalogo"><button class="btn">Ver catálogo</button></a>
+  </header>
+
+  <section id="catalogo">
+    <h2 style="text-align:center; font-size:2.5rem; color:#009f4d;">Catálogo de Productos</h2>
+    <div class="decorative-line"></div>
+    <div class="carousel">
+      <div class="carousel-track">
+        
+      </div>
+      <div class="carousel-buttons">
+        <button id="prev">❮</button>
+        <button id="next">❯</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="nosotros">
+    <h2 style="text-align:center; font-size:2.5rem; color:#009f4d;">Sobre Nosotros</h2>
+    <div class="decorative-line"></div>
+    <p style="margin-top:2rem; text-align:center; max-width:800px; margin-left:auto; margin-right:auto; font-size:1.2rem;">En Vida Natural creemos en la alimentación consciente. Trabajamos con productores locales para ofrecerte alimentos frescos, orgánicos y de la mejor calidad. Queremos ser tu aliado en un estilo de vida saludable y sostenible.</p>
+  </section>
+
+  <section id="soporte-tecnico">
+     <h1 style=" color:#009f4d;">Consultá a nuestra IA</h1>
+     <div class="decorative-line"></div>
+     <div class="chat">
+        <input id="question" placeholder="Ej: ¿Tienen harina integral?">
+        <button id="iaButton">Preguntar</button>
+        <p id="answer"></p>
+     </div>
+  </section>
+
+  <footer id="contacto">
+    <p>© 2025 Vida Natural - Dietética</p>
+    <p>Contacto: <a href="mailto:info@vidanatural.com">info@vidanatural.com</a></p>
+  </footer>
+  
+<script src="java.js"></script>
+</body>
+</html>
